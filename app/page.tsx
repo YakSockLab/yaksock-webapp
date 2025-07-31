@@ -283,7 +283,53 @@ const PrivacyPolicyScreen = ({ onBack }: { onBack: () => void }) => (
       </Button>
       <h1 className="text-lg font-semibold absolute left-1/2 -translate-x-1/2">민감정보 수집 이용 동의서</h1>
     </header>
-    <div className="flex-grow overflow-y-auto p-6 text-sm">{/* Policy content remains the same */}</div>
+    <div className="flex-grow overflow-y-auto p-6 text-sm">
+      <p className="font-bold mb-4">
+        본 개인정보처리방침은 약속연구소(이하 '당사')가 제공하는 중복 약물 비교 서비스(이하 '서비스')에서 이용자의
+        개인정보를 어떻게 처리하고 보호하는지를 설명합니다.
+      </p>
+      <h2 className="font-bold text-base mt-6 mb-2">제1조 (개인정보의 처리 목적)</h2>
+      <p className="mb-4">
+        당사는 다음의 목적을 위하여 최소한의 개인정보를 처리합니다. 처리된 정보는 아래 목적 외의 용도로는 사용되지
+        않으며, 목적 변경 시에는 「개인정보 보호법」 제18조에 따라 별도의 동의를 받습니다.
+      </p>
+      <ol className="list-decimal list-inside space-y-2">
+        <li>약물 분석 서비스 제공</li>
+        <li>
+          사용자가 업로드하거나 촬영한 약 사진 또는 처방전을 OCR로 인식하고, DUR API를 연동해 약물 정보를 분석·제공하기
+          위한 목적
+        </li>
+        <li>민원 응대 및 오류 처리</li>
+        <li>
+          사용자가 제공한 정보 또는 시스템 사용 로그를 기반으로 사용자 문의에 응답하고, 시스템 오류 및 이슈를 파악하기
+          위한 목적
+        </li>
+      </ol>
+      <h2 className="font-bold text-base mt-6 mb-2">제2조 (개인정보의 수집 항목 및 수집 방법)</h2>
+      <h3 className="font-semibold mt-4 mb-2">1. 수집 항목</h3>
+      <p className="mb-4">
+        본 서비스는 원칙적으로 개인 식별 가능한 정보는 수집하지 않습니다. 다만, 시스템 운영을 위해 다음과 같은 정보가
+        일시적으로 수집될 수 있습니다.
+      </p>
+      <table className="w-full border-collapse border border-gray-300">
+        <thead>
+          <tr className="bg-gray-100">
+            <th className="border border-gray-300 p-2">구분</th>
+            <th className="border border-gray-300 p-2">수집항목</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="border border-gray-300 p-2 font-semibold">필수</td>
+            <td className="border border-gray-300 p-2">업로드한 이미지(약 사진, 처방전), OCR 결과 텍스트</td>
+          </tr>
+          <tr>
+            <td className="border border-gray-300 p-2 font-semibold">자동수집</td>
+            <td className="border border-gray-300 p-2">기기 정보(모델, OS), 사용 시각, 접속 로그, IP주소 등</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 )
 
